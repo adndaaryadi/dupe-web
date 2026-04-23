@@ -3,23 +3,116 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Caturnawa UNAS FEST</title>
+    <title>Caturnawa | UNAS FEST Digital Hub</title>
+    <meta
+      name="description"
+      content="Microsite Caturnawa UNAS FEST yang merapikan jalur ke kanal resmi, website utama, dan ruang sosial dengan tampilan yang lebih kuat."
+    />
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
   </head>
   <body>
-    <main>
-      <h1>Selamat Datang di Caturnawa</h1>
-      <h2>Caturnawa UNAS FEST</h2>
-      <p>Ikuti kami di media sosial</p>
-      <nav aria-label="Link utama Caturnawa">
-        <a href="https://caturnawa.unasfest.com/">Caturnawa</a>
-        <a href="https://www.unasfest.com/">Unasfest</a>
-        <a href="https://www.instagram.com/">Instagram</a>
-        <a href="https://www.youtube.com/">YouTube</a>
-        <a href="https://www.tiktok.com/">TikTok</a>
-        <a href="https://www.linkedin.com/">LinkedIn</a>
-        <a href="https://caturnawa.unasfest.com/">YB</a>
-      </nav>
-    </main>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html">
+          <span>Caturnawa</span>
+          <strong>UNAS FEST Digital Hub</strong>
+        </a>
+        <nav class="nav" aria-label="Navigasi utama">
+          <a aria-current="page" href="./index.html">Beranda</a>
+          <a href="./story.html">Story</a>
+          <a href="./links.html">Links</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Microsite refresh</p>
+            <h1>Link hub yang tadinya mentah, sekarang punya rasa panggung.</h1>
+            <p class="lead">
+              Versi baru `dupe-web` ini tetap menjaga fungsi utamanya sebagai
+              gerbang cepat ke kanal Caturnawa dan UNAS FEST, tapi dibikin jauh
+              lebih kuat secara visual, lebih rapi di mobile, dan lebih layak
+              dijadikan repo publik yang punya identitas sendiri.
+            </p>
+            <div class="cta-row">
+              <a class="button primary" href="https://caturnawa.unasfest.com/">Buka situs Caturnawa</a>
+              <a class="button secondary" href="./links.html">Lihat semua kanal</a>
+            </div>
+          </div>
+          <aside class="hero-art reveal" aria-hidden="true">
+            <div class="orb orb-a"></div>
+            <div class="orb orb-b"></div>
+            <div class="orb orb-c"></div>
+            <div class="totem">
+              <span>CAT</span>
+              <span>UR</span>
+              <span>NA</span>
+              <span>WA</span>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section intro-grid">
+          <article class="panel reveal">
+            <span class="panel-label">Masalah versi lama</span>
+            <h2>Sebelumnya cuma daftar tautan.</h2>
+            <p>
+              Repo awal bekerja, tapi impresinya generik dan belum punya hirarki
+              visual yang ngebantu pengunjung ngerti apa itu Caturnawa, mana link
+              utama, dan gimana alur klik yang paling penting.
+            </p>
+          </article>
+          <article class="panel dark reveal">
+            <span class="panel-label">Arah versi baru</span>
+            <h2>Sekarang jadi microsite yang punya ritme.</h2>
+            <p>
+              Halaman depan dibuat seperti poster digital: satu ide besar, satu
+              fokus aksi, lalu didukung panel-panel yang menjelaskan kanal dan
+              ritme komunikasi tanpa bikin pengunjung tenggelam di tombol.
+            </p>
+          </article>
+        </section>
+
+        <section class="section spotlight">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Verified path first</p>
+            <h2>Dua jalur yang paling penting langsung didorong ke depan.</h2>
+            <p>
+              Karena link yang benar-benar terverifikasi dari repo publik awal
+              adalah situs Caturnawa dan situs UNAS FEST, dua jalur itu sekarang
+              ditempatkan sebagai poros utama pengalaman. Kanal sosial tetap ada,
+              tapi dijadikan lapisan kedua agar hub ini tetap jujur secara data.
+            </p>
+          </div>
+          <div class="strip reveal">
+            <a href="https://caturnawa.unasfest.com/">
+              <strong>caturnawa.unasfest.com</strong>
+              <span>Gerbang utama Caturnawa</span>
+            </a>
+            <a href="https://www.unasfest.com/">
+              <strong>unasfest.com</strong>
+              <span>Portal payung UNAS FEST</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="section metrics">
+          <article class="metric reveal">
+            <span>Halaman</span>
+            <strong>3</strong>
+          </article>
+          <article class="metric reveal">
+            <span>Link utama</span>
+            <strong>7</strong>
+          </article>
+          <article class="metric reveal">
+            <span>Workflow</span>
+            <strong>3</strong>
+          </article>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

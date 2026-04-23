@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create rolling release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="v$(date -u +'%Y.%m.%d').${GITHUB_RUN_NUMBER}"
+          git tag "$VERSION" "$GITHUB_SHA"
+          git push origin "$VERSION"
+          payload=$(cat <<EOF
+          {
+            "tag_name": "$VERSION",
+            "target_commitish": "${GITHUB_SHA}",
+            "name": "Release $VERSION",
+            "body": "Rilis otomatis microsite Caturnawa.",
+            "draft": false,
+            "prerelease": false,
+            "make_latest": "true",
+            "generate_release_notes": true
+          }
+          EOF
+          )
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/${GITHUB_REPOSITORY}/releases \
+            -d "$payload"
