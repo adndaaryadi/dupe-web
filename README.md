@@ -5,6 +5,8 @@
 ![License](https://img.shields.io/github/license/adndaaryadi/dupe-web)
 ![Pages](https://img.shields.io/badge/GitHub%20Pages-ready-0f756e)
 ![Node](https://img.shields.io/badge/Node-22-10233e?logo=node.js&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-2%20passed-0f756e)
+![Mobile First](https://img.shields.io/badge/mobile--first-responsive-ff935c)
 
 `dupe-web` sekarang dirombak dari repo statis yang awalnya cuma berisi satu halaman link sederhana menjadi microsite Caturnawa UNAS FEST yang lebih matang secara visual, lebih jernih secara alur klik, dan lebih siap dijadikan repo publik yang proper. Repo publik awal cuma menampilkan judul, beberapa tautan, dan styling yang sangat minimal. Fungsi dasarnya memang jalan, tapi impresinya generik, belum ada hirarki yang nuntun pengunjung ke link paling penting, belum ada test, belum ada CI, belum ada rilis otomatis, dan belum ada README yang menjelaskan arah repo. Di versi baru ini, semua lapisan itu dibenerin tanpa menghilangkan inti utamanya: tetap menjadi hub yang mengarahkan pengunjung ke kanal Caturnawa dan UNAS FEST.
 
@@ -280,6 +282,20 @@ Kalau nanti sumber resmi Caturnawa sudah lebih lengkap atau akses GitHub dari me
 5. pertimbangkan form pendaftaran atau kontak jika kebutuhan operasional acara memang mengarah ke sana
 
 Dengan kata lain, repo ini sekarang bukan lagi link sederhana yang susah dibanggakan. Fondasinya sudah cukup kuat untuk ditumbuhkan jadi hub acara yang lebih hidup.
+
+## Troubleshooting
+
+### Lint gagal: "File wajib hilang"
+
+Pastikan semua file inti ada di root: `index.html`, `story.html`, `links.html`, `style.css`, `app.js`. Lint script mengecek keberadaan file-file ini.
+
+### Test gagal: navigasi silang
+
+Test memverifikasi bahwa setiap halaman HTML punya link ke ketiga halaman. Pastikan setiap file HTML punya elemen `<nav>` dengan link ke `index.html`, `story.html`, dan `links.html`.
+
+### Site tidak tampil di GitHub Pages
+
+Pastikan workflow `pages.yml` aktif dan branch `main` sudah di-push. GitHub Pages deploy dari root directory (`.`).
 
 ## Kontributor
 
